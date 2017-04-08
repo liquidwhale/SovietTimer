@@ -8,13 +8,13 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
     public static final String EXTRA_TIME_PERIOD = "cloud.akadem.soviettimer.EXTRA_TIME_PERIOD";
-    public static final int timePeriod = 20;
+    private int timePeriod = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initTimePeriodTextView();
+        updateTimePeriodTextView();
     }
 
     public void startTimer(View view) {
@@ -23,7 +23,17 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    public void initTimePeriodTextView() {
+    public void increaseTimePeriod(View view) {
+        timePeriod++;
+        updateTimePeriodTextView();
+    }
+
+    public void decreaseTimePeriod(View view) {
+        timePeriod--;
+        updateTimePeriodTextView();
+    }
+
+    private void updateTimePeriodTextView() {
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(Integer.toString(timePeriod));
     }
