@@ -1,7 +1,9 @@
 package cloud.akadem.soviettimer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -10,4 +12,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+//    /** Called when the user taps the Send button */
+//    public void sendMessage(View view) {
+//        Intent intent = new Intent(this, TimerActivity.class);
+//        startActivity(intent);
+//    }
 }
