@@ -42,12 +42,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:text="Button"
+            android:text="-"
             android:layout_width="wrap_content"
             android:layout_height="69dp"
             tools:layout_editor_absoluteY="25dp"
             tools:layout_editor_absoluteX="305dp"
-            android:id="@+id/button9" />
+            android:id="@+id/minusButton" />
 
         <TextView
             android:layout_width="199dp"
@@ -57,12 +57,12 @@
             android:id="@+id/textView" />
 
         <Button
-            android:text="Button"
+            android:text="+"
             android:layout_width="wrap_content"
             android:layout_height="69dp"
             tools:layout_editor_absoluteY="25dp"
             tools:layout_editor_absoluteX="305dp"
-            android:id="@+id/button2"
+            android:id="@+id/plusButton"
             android:layout_weight="1" />
 
     </LinearLayout>
