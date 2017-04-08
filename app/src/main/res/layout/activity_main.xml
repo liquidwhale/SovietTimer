@@ -21,6 +21,6 @@
         android:layout_marginBottom="16dp"
         android:elevation="0dp"
         tools:text=""
-        android:onClick="startTimer (MainActivity)"/>
+        android:onClick="startTimer"/>
 
 </RelativeLayout>
