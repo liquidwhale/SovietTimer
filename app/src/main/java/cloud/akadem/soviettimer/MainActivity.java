@@ -13,9 +13,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-//    /** Called when the user taps the Send button */
-//    public void sendMessage(View view) {
-//        Intent intent = new Intent(this, TimerActivity.class);
-//        startActivity(intent);
-//    }
+    public void startTimer(View view) {
+        Intent intent = new Intent(this, TimerActivity.class);
+        startActivity(intent);
+    }
 }
