@@ -43,7 +43,6 @@
             android:id="@+id/button9" />
 
         <TextView
-            android:text="TextView"
             android:layout_width="199dp"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteY="25dp"
