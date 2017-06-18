@@ -9,9 +9,10 @@ import android.widget.TextView;
 public class TimerActivity extends Activity {
     CountDownTimer timer;
     TextView countDownTextView;
-    String[] timePeriods = new String[] {"8", "5"};
+//    String[] timePeriods = new String[] {"8", "5"};
+    int timePeriods[];
     int periodCount = 0;
-    int maxPeriodCount = timePeriods.length;
+    int maxPeriodCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,8 @@ public class TimerActivity extends Activity {
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        String timePeriod = intent.getStringExtra(MainActivity.EXTRA_TIME_PERIOD);
+        timePeriods = intent.getIntArrayExtra("numbers");
+        maxPeriodCount = timePeriods.length;
     }
 
     @Override
@@ -32,10 +34,10 @@ public class TimerActivity extends Activity {
         handlePeriod(timePeriods[periodCount]);
     }
 
-    public void handlePeriod(String timePeriod) {
-        countDownTextView.setText(timePeriod);
+    public void handlePeriod(int timePeriod) {
+        countDownTextView.setText(Integer.toString(timePeriod));
 
-        timer = new CountDownTimer(Integer.parseInt(timePeriod) * 1000 + 100, 1000) {
+        timer = new CountDownTimer(timePeriod * 1000 + 100, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     int n = (int) millisUntilFinished;
