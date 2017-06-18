@@ -23,11 +23,11 @@ public class TimerActivity extends Activity {
 
         countDownTextView.setText(timePeriod);
 
-        timer = new CountDownTimer(Integer.parseInt(timePeriod) * 1000, 1000) {
+        timer = new CountDownTimer(Integer.parseInt(timePeriod) * 1000 + 100, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 int n = (int) millisUntilFinished;
-                countDownTextView.setText("" + n);
+                countDownTextView.setText("" + n/1000);
             }
 
             @Override

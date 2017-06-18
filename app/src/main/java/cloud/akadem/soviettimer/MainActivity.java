@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
     public static final String EXTRA_TIME_PERIOD = "cloud.akadem.soviettimer.EXTRA_TIME_PERIOD";
-    private int timePeriod = 20;
+    private int timePeriod = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
