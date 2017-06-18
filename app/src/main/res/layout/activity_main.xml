@@ -8,68 +8,13 @@
     tools:context="cloud.akadem.soviettimer.MainActivity"
     android:background="#c6dabf">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="233dp"
-        android:layout_height="60dp"
-        android:layout_weight="0.7"
-        android:background="#b4c7ae"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="159dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="63dp"
-        android:layout_height="61dp"
-        android:background="#0d3b66"
-        android:onClick="increaseTimePeriod"
-        android:text="+"
-        android:textColor="@android:color/white"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="159dp" />
-
-    <Button
-        android:id="@+id/minusButton"
-        style="@android:style/DeviceDefault.Light.ButtonBar"
-        android:layout_width="62dp"
-        android:layout_height="62dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:background="#0d3b66"
-        android:onClick="decreaseTimePeriod"
-        android:text="-"
-        android:textColor="@android:color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="159dp" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/startTimerButton"
-        android:elevation="0dp"
-        tools:text="start"
-        android:onClick="startTimer"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="#0d3b66"
-        android:textColor="@android:color/white"/>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="69dp"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="56dp"
         android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -84,61 +29,103 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="#0d3b66"
+            android:onClick="decreaseTimePeriod"
             android:text="-"
             android:textColor="@android:color/white"
             tools:layout_editor_absoluteX="305dp"
-            tools:layout_editor_absoluteY="25dp"
-            android:onClick="" />
-
+            tools:layout_editor_absoluteY="25dp" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.7"
+            android:background="#b4c7ae"
             tools:layout_editor_absoluteX="93dp"
-            tools:layout_editor_absoluteY="25dp"
-            android:background="#b4c7ae"/>
-
+            tools:layout_editor_absoluteY="25dp" />
 
         <Button
             android:id="@+id/plusButton1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="+"
-            tools:layout_editor_absoluteX="305dp"
-            android:onClick="" />
-
-        <Button
-            android:text="-"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="25dp"
-            tools:layout_editor_absoluteX="305dp"
-            android:id="@+id/minusButton2"
-            android:onClick="" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="25dp"
-            tools:layout_editor_absoluteX="93dp"
-            android:id="@+id/textView2"
-            android:layout_weight="0.7" />
-
-        <Button
-            android:text="+"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="25dp"
-            tools:layout_editor_absoluteX="305dp"
-            android:id="@+id/plusButton2"
-            android:onClick=""
             android:background="#0d3b66"
-            android:textColor="@android:color/white"/>
-
+            android:onClick="increaseTimePeriod"
+            android:text="+"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="25dp" />
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="164dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <Button
+            android:id="@+id/minusButton2"
+            style="@android:style/DeviceDefault.Light.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#0d3b66"
+            android:onClick="decreaseTimePeriod"
+            android:text="-"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:background="#b4c7ae"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <Button
+            android:id="@+id/plusButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#0d3b66"
+            android:onClick="increaseTimePeriod"
+            android:text="+"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:text="start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTimerButton"
+        android:elevation="0dp"
+        android:onClick="startTimer"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#0d3b66"
+        android:textColor="@android:color/white"/>
 
 </android.support.constraint.ConstraintLayout>

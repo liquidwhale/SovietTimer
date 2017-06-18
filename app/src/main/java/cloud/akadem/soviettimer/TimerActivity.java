@@ -23,7 +23,7 @@ public class TimerActivity extends Activity {
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        timePeriods = intent.getIntArrayExtra("numbers");
+        timePeriods = intent.getIntArrayExtra("intervals");
         maxPeriodCount = timePeriods.length;
     }
 
@@ -41,7 +41,7 @@ public class TimerActivity extends Activity {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     int n = (int) millisUntilFinished;
-                    countDownTextView.setText("" + n/1000);
+                    countDownTextView.setText("" + n / 1000);
                 }
 
                 @Override
