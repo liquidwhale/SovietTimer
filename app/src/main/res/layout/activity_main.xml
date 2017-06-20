@@ -14,7 +14,7 @@
         android:layout_height="69dp"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -63,7 +63,7 @@
         android:layout_height="69dp"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="139dp"
         android:orientation="horizontal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -95,6 +95,104 @@
 
         <Button
             android:id="@+id/plusButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#0d3b66"
+            android:onClick="increaseTimePeriod"
+            android:text="+"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="228dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <Button
+            android:id="@+id/minusButton3"
+            style="@android:style/DeviceDefault.Light.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#0d3b66"
+            android:onClick="decreaseTimePeriod"
+            android:text="-"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:background="#b4c7ae"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <Button
+            android:id="@+id/plusButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#0d3b66"
+            android:onClick="increaseTimePeriod"
+            android:text="+"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="317dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <Button
+            android:id="@+id/minusButton4"
+            style="@android:style/DeviceDefault.Light.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#0d3b66"
+            android:onClick="decreaseTimePeriod"
+            android:text="-"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="305dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:background="#b4c7ae"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <Button
+            android:id="@+id/plusButton4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="#0d3b66"

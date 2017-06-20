@@ -13,6 +13,7 @@ public class TimerActivity extends Activity {
     int timePeriods[];
     int periodCount = 0;
     int maxPeriodCount = 0;
+    int cycles = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,6 @@ public class TimerActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-
         handlePeriod(timePeriods[periodCount]);
     }
 
@@ -48,7 +48,11 @@ public class TimerActivity extends Activity {
                 public void onFinish() {
                     countDownTextView.setText("Done");
                     periodCount++;
-                    if (periodCount < maxPeriodCount) {
+                    if (cycles < maxPeriodCount - 3 && periodCount == maxPeriodCount - 1) {
+                        cycles++;
+                        periodCount = 1;
+                    }
+                    if (periodCount < maxPeriodCount - 1 && periodCount > 0) {
                         handlePeriod(timePeriods[periodCount]);
                     }
                 }

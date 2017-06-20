@@ -8,9 +8,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-    private int intervals[] = {10,10};
+    private int intervals[] = {2,3, 4, 2};
     private TextView textView1;
     private TextView textView2;
+    private TextView textView3;
+    private TextView textView4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,18 @@ public class MainActivity extends Activity {
         Button plusButton2 = (Button) findViewById(R.id.plusButton2);
         textView2 =  (TextView) findViewById(R.id.textView2);
 
+        Button minusButton3 = (Button) findViewById(R.id.minusButton3);
+        Button plusButton3 = (Button) findViewById(R.id.plusButton3);
+        textView3 =  (TextView) findViewById(R.id.textView3);
+
+        Button minusButton4 = (Button) findViewById(R.id.minusButton4);
+        Button plusButton4 = (Button) findViewById(R.id.plusButton4);
+        textView4 =  (TextView) findViewById(R.id.textView4);
+
         updateTimePeriodTextView(textView1, intervals[0]);
         updateTimePeriodTextView(textView2, intervals[1]);
+        updateTimePeriodTextView(textView3, intervals[2]);
+        updateTimePeriodTextView(textView4, intervals[3]);
 
         minusButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v1){
@@ -49,6 +61,30 @@ public class MainActivity extends Activity {
         plusButton2.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v1){
                 intervals[1] = increaseTimePeriod(textView2, intervals[1]);
+            }
+        });
+
+        minusButton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v1){
+                intervals[2] = decreaseTimePeriod(textView3, intervals[2]);
+            }
+        });
+
+        plusButton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v1){
+                intervals[2] = increaseTimePeriod(textView3, intervals[2]);
+            }
+        });
+
+        minusButton4.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v1){
+                intervals[3] = decreaseTimePeriod(textView4, intervals[3]);
+            }
+        });
+
+        plusButton4.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v1){
+                intervals[3] = increaseTimePeriod(textView4, intervals[3]);
             }
         });
     }
