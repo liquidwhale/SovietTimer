@@ -9,11 +9,8 @@ import android.widget.TextView;
 public class TimerActivity extends Activity {
     CountDownTimer timer;
     TextView countDownTextView;
-//    String[] timePeriods = new String[] {"8", "5"};
-    int timePeriods[];
-    int periodCount = 0;
-    int maxPeriodCount = 0;
-    int cycles = 0;
+    String state = "prepairing";
+    int values[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,20 +21,37 @@ public class TimerActivity extends Activity {
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        timePeriods = intent.getIntArrayExtra("intervals");
-        maxPeriodCount = timePeriods.length;
+        values = intent.getIntArrayExtra("values");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        handlePeriod(timePeriods[periodCount]);
+        handlePeriod();
     }
 
-    public void handlePeriod(int timePeriod) {
-        countDownTextView.setText(Integer.toString(timePeriod));
+    public void handlePeriod() {
+        int time = 0;
 
-        timer = new CountDownTimer(timePeriod * 1000 + 100, 1000) {
+        switch (state) {
+            case "prepairing":
+                time = values[0];
+                state = "work";
+                break;
+            case "work":
+                time = values[1];
+                state = "rest";
+                break;
+            case "rest":
+                time = values[2];
+                state = "work";
+                values[3]--;
+                break;
+        }
+
+        countDownTextView.setText(Integer.toString(time));
+
+        timer = new CountDownTimer(time * 1000 + 100, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     int n = (int) millisUntilFinished;
@@ -46,14 +60,10 @@ public class TimerActivity extends Activity {
 
                 @Override
                 public void onFinish() {
-                    countDownTextView.setText("Done");
-                    periodCount++;
-                    if (cycles < maxPeriodCount - 3 && periodCount == maxPeriodCount - 1) {
-                        cycles++;
-                        periodCount = 1;
-                    }
-                    if (periodCount < maxPeriodCount - 1 && periodCount > 0) {
-                        handlePeriod(timePeriods[periodCount]);
+                    if (values[3] != 0) {
+                        handlePeriod();
+                    } else {
+                        countDownTextView.setText("Done");
                     }
                 }
             };
